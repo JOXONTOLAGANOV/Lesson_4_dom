@@ -10,6 +10,7 @@ formElement.addEventListener("submit", event => {
     const nameElement = document.querySelector("#nameInput")
     const LastnameElement = document.querySelector("#LastNameInput")
     const selectElement = document.querySelector("#interest")
+    
 
 
     const newLiElement = document.createElement("Li")
@@ -22,6 +23,7 @@ formElement.addEventListener("submit", event => {
     const newDeleteButtonElement = document.createElement("button")
 
 
+   
     newCardElement.classList.add("card")
     newCardBodyElement.classList.add("card-body")
     newWrapperElement.classList.add("justify-content-between")
@@ -46,6 +48,14 @@ formElement.addEventListener("submit", event => {
     studentListElement.prepend(newLiElement)
 
 
-    newPElement.textContent = nameElement + " " + LastnameElement.value
-    newIterestElement.textContent = selectElement.value
+    newPElement.textContent = nameElement.value + " " + LastnameElement
+    newIterestElement.textContent = selectElement
+
+    newDeleteButtonElement.textContent = "Delete"
+
+    newDeleteButtonElement.addEventListener("click", event =>{
+        newLiElement.remove();
+    })
+
+    formElement.reset()
 })
