@@ -1,0 +1,17 @@
+.qwerty,.btn-primary{
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.text-center{
+    font-weight: bold;
+    position: relative;
+    top: 70px;
+}
+
+.card{
+    position: relative;
+    top: 300px;
+    left: -250px;
+}
